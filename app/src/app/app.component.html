@@ -1,0 +1,30 @@
+<div
+  class="list"
+  cdkDropList
+  #playersList="cdkDropList"
+  [cdkDropListData]="players"
+  [cdkDropListConnectedTo]="[fieldsList]"
+  >
+  <app-player-item
+    *ngFor="let player of players"
+    [player]="player"
+    class="example-list"
+    cdkDrag
+  ></app-player-item>
+</div>
+
+<div
+  class="field"
+  cdkDropList
+  #fieldsList="cdkDropList"
+  [cdkDropListData]="fields"
+  (cdkDropListDropped)="drop($event)"
+><div
+  *ngFor="let fieldItem of fields; index as i"
+  class="field-zone"
+  ><div
+    class="place"
+    [id]="i"
+    ></div>
+  </div>
+</div>

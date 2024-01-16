@@ -1,0 +1,17 @@
+:host {
+  width: fit-content;
+  display: flex;
+  gap: 10px;
+  background-color: #2684FC;
+  padding: 10px;
+  border: solid #555 1px;
+  border-radius: 5px;
+  color: white;
+  align-items: center;
+  cursor: move;
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
+}
